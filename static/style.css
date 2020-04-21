@@ -1,0 +1,76 @@
+body {
+    background-color: #131323;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: larger;
+}
+
+.week {
+  display: flex;
+  
+}
+
+.day {
+  flex: 1 0 0px;
+  border-left: 1px solid #444;
+}
+
+.day-title {
+  padding: 0.5em 1em;
+}
+
+.day-title .day-name {
+  font-weight: bold;
+}
+
+.day-title .day-date {
+  font-size: 0.9em;
+  margin-left: 2em;
+}
+
+.events {
+  display: grid;
+  grid-row-gap: 0.01rem;
+  grid-template-rows: repeat(28, 1.3rem);
+  background-image:
+linear-gradient(#444 1px, transparent 1px);
+  background-size: 100% 2.61rem;
+}
+
+.event {
+  background-color: #3232c1;
+  padding: 0;
+  font-size: small;
+  border-radius: 3px;
+}
+
+.kids {
+  background-color: #aa5393;
+}
+
+.bmm {
+  background-image: linear-gradient(90deg #000 #03df76);
+  /*background-color: #03df76;*/
+}
+
+.buk {
+  background-color: black;
+  border: 1.1px solid white;
+}
+
+.event h3.event-title {
+  font-size: smaller;
+  margin: 0;
+  margin-left: 0.1em;
+  padding: 0;
+  display: inline;
+}
+
+.event .event-time {
+  display: inline;
+  align: right;
+  font-weight: 300;
+}

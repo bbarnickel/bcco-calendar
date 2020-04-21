@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wochenkalender {{model['church']}} online</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Wochenkalender {{model['church']}} online vom {{model['start']}} bis {{model['end']}}</h1>
+
+    <div class="week">
+        {% for day in model['days'] %}
+        <div class="day">
+            <div class="day-title">
+                <span class="day-name">{{day['name']}}</span>
+                <span class="day-date">{{day['date']}}</span>
+            </div>
+            <div class="events">
+                {% for event in day['events'] %}
+                <div class="event {{event['classes']}}" style="{{event['style']}}">
+                    <h3 class="event-title">{{event['title']}}</h3>
+                    <div class="event-time">{{event['begin']}} - {{event['end']}}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
